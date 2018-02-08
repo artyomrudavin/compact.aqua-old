@@ -1,0 +1,25 @@
+// Function pixels to rems:
+// You can wright only rem(ANY), its means that you transformed ANYpx to rem in your code
+
+// @function rem($px)
+// 	$rems: $px / 16
+// 	@return $rems+rem
+
+@function rem($pxsize, $rembase: 16)
+	@return ($pxsize/$rembase)+rem
+
+// Colors:
+
+$accent: #2395ED
+$orange: #FF9B17
+$red: #EE4034
+$black: #444444
+$light-gray: #F2F2F2
+$dark-gray: #9D9D9D
+$green: #0b9722
+
+// Fonts:
+
+$default-font: "raleway-sans", sans-serif
+$logo-font: "magistral", sans-serif
+$else-font: "open-sans", sans-serif
