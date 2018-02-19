@@ -130,42 +130,22 @@
 			.row
 				.col-12
 					.stand
-						.stand-termV
-							top: rem(15)
-							right: rem(105)
-						.stand-deff
-							top: rem(125)
-							left: 0
-						.stand-carga
-							top: rem(200)
-							left: rem(5)
 						.stand-termB
-							top: rem(280)
-							left: 0
+							top: rem(185)
 						.stand-zakr
-							top: rem(365)
-							left: 0
+							top: rem(268)
 						.stand-rebra
-							top: rem(445)
-							left: rem(10)
+							top: rem(335)
+							left: rem(25)
 						.stand-kran
-							top: rem(520)
-							left: rem(65)
-						.stand-ohl
-							top: rem(155)
-							right: rem(5)
+							top: rem(365)
+							left: rem(95)
 						.stand-hol
-							top: rem(240)
-							right: rem(5)
+							top: rem(145)
 						.stand-vzriv
-							top: rem(325)
-							right: rem(5)
+							top: rem(225)
 						.stand-prokl
-							top: rem(393)
-							right: 0
-						.stand-ten
-							top: rem(505)
-							right: rem(30)
+							top: rem(305)
 
 	/* Standart End */
 
@@ -188,7 +168,7 @@
 			.h3
 				font-size: 64px // md 72px xs 48px
 			.h1
-				font-size: 20px // xs 16px
+				font-size: 26px // xs 16px
 			.standart
 				padding: 0 rem(14) // xs none
 				border: 2px solid #000 // xs none
@@ -206,10 +186,6 @@
 					bottom: rem(27) // sm rem(27) xs rem(10)
 					.num
 						font-size: 22px // xs 18px
-			.form
-				flex-direction: row
-				.form-item
-					width: 32%
 		.header-bonus
 			top: rem(500)
 			right: rem(10)
@@ -242,38 +218,28 @@
 							top: rem(20)
 							right: 0
 						.stand-deff
-							top: rem(170)
+							top: 0
 							left: 0
 						.stand-carga
-							top: rem(270)
-							left: rem(5)
+							top: rem(55)
 						.stand-termB
-							top: rem(375)
-							left: 0
+							top: rem(252)
 						.stand-zakr
-							top: rem(490)
-							left: 0
+							top: rem(290)
+							left: rem(60)
 						.stand-rebra
-							top: rem(600)
-							left: rem(10)
+							top: rem(465)
+							left: rem(45)
 						.stand-kran
-							top: rem(640)
-							left: rem(65)
-						.stand-ohl
-							top: rem(210)
-							right: rem(5)
+							top: rem(480)
+							left: rem(155)
 						.stand-hol
-							top: rem(325)
-							right: rem(5)
+							top: rem(95)
 						.stand-vzriv
-							top: rem(435)
-							right: rem(5)
+							top: rem(310)
 						.stand-prokl
-							top: rem(535)
-							right: 0
-						.stand-ten
-							top: rem(675)
-							right: rem(30)
+							top: rem(417)
+							right: rem(10)
 
 	/* Standart End */
 
@@ -381,26 +347,29 @@
 							h4
 								font-size: 14px
 						.stand-termV
-							right: rem(25)
+							right: 0
 						.stand-deff
-							top: rem(160)
+							top: 0
 						.stand-carga
-							top: rem(215)
+							top: rem(70)
+						.stand-termB
+							top: rem(305)
+							left: rem(17)
 						.stand-zakr
-							top: rem(485)
+							top: rem(375)
+							left: rem(70)
 						.stand-rebra
-							top: rem(595)
+							top: rem(560)
 						.stand-kran
-							left: rem(95)
+							top: rem(610)
+							left: rem(190)
 						.stand-hol
-							top: rem(320)
+							top: rem(110)
 						.stand-vzriv
-							top: rem(430)
+							top: rem(250)
 						.stand-prokl
-							top: rem(530)
-							right: rem(5)
-						.stand-ten
-							top: rem(670)
+							top: rem(505)
+							right: rem(40)
 
 	/* Standart End */
 
@@ -488,6 +457,7 @@
 		.phone-mobile, .icon
 			display: none
 	.header-navbar
+		z-index: 100
 		#menu
 			display: flex
 			flex-direction: row
@@ -506,10 +476,12 @@
 				display: block
 	.time-wrap
 		flex-direction: column
+		align-items: flex-start
 		width: 90%
 		height: 100%
 		p
 			margin-bottom: rem(-10)
+			margin-left: rem(12)
 		.timer
 			font-size: 24px
 			#days1, #hours1, #minutes1, #seconds1
@@ -517,11 +489,11 @@
 	.header-wellcome
 		.container-fluid
 			.img-2
-				margin-left: rem(-95)
+				// margin-left: rem(-95)
 			.img-1
 				display: none
 			.h2
-				font-size: 31px // 28px
+				font-size: 36px // 28px
 			.h3
 				font-size: 72px // 64px
 			.standart
@@ -531,6 +503,10 @@
 				z-index: 1
 			.formAction, form
 				min-width: rem(570)
+			.form
+				flex-direction: row
+				.form-item
+					width: 32%
 			.order
 				.order-bg
 					display: block
@@ -570,47 +546,39 @@
 								width: rem(180)
 								font-size: 11px
 						.stand-termV
-							top: 0
-							right: rem(50)
+							top: rem(40)
+							right: 0
 						.stand-deff
-							top: rem(90)
-							left: rem(10)
+							top: rem(15)
+							left: 0
 						.stand-carga
-							top: rem(195)
-							left: rem(30)
+							top: rem(115)
+							left: 0
 						.stand-termB
 							top: rem(300)
 							left: rem(5)
 							p
 								width: rem(150)
 						.stand-zakr
-							top: rem(415)
+							top: rem(450)
 							left: 0
 						.stand-rebra
-							top: rem(525)
+							top: rem(590)
 							left: rem(10)
 							h4
 								width: rem(180)
 						.stand-kran
-							top: rem(620)
-							left: rem(120)
-						.stand-ohl
-							top: rem(130)
-							right: rem(5)
-							p
-								width: rem(150)
+							top: rem(680)
+							left: rem(230)
 						.stand-hol
-							top: rem(245)
-							right: rem(10)
+							top: rem(230)
+							right: 0
 						.stand-vzriv
-							top: rem(360)
-							right: rem(5)
+							top: rem(390)
+							right: 0
 						.stand-prokl
-							top: rem(460)
-							right: rem(5)
-						.stand-ten
-							top: rem(595)
-							right: rem(30)
+							top: rem(540)
+							right: rem(55)
 
 	/* Standart End */
 
@@ -700,6 +668,11 @@
 						font-size: 48px // 576 32px
 						#days2, #hours2, #minutes2, #seconds2
 							min-width: rem(60) // 576 rem(44)
+			.bonus-form
+				form
+					flex-direction: row
+					input
+						margin-right: rem(10)
 
 	/* Bonus End */
 
@@ -776,6 +749,10 @@
 	/* Modal End */
 
 
+/* Custom */
+@media only screen and (min-width : 768px) and (max-width : 880px)
+	.headPrinc
+		display: none
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	.col-lg-2
@@ -811,7 +788,7 @@
 		#menu
 			li
 				.h-link
-					padding: rem(10) rem(20)
+					padding: rem(10) rem(14)
 			.btnHead
 				.btn
 					padding: rem(10) rem(20)
@@ -833,32 +810,43 @@
 								width: rem(230)
 								font-size: 12px
 						.stand-termV
-							right: rem(110)
+							top: rem(45)
+							right: rem(65)
 						.stand-deff
-							left: rem(60)
+							top: rem(20)
+							left: rem(65)
 						.stand-carga
-							left: rem(80)
+							top: rem(120)
+							left: rem(10)
 						.stand-termB
+							top: rem(230)
 							left: rem(30)
 							p
 								width: rem(230)
 						.stand-zakr
-							left: rem(45)
+							top: rem(380)
+							left: rem(-25)
 						.stand-rebra
-							left: rem(60)
+							top: rem(515)
+							left: rem(20)
 							h4
 								width: inherit
 						.stand-kran
-							left: rem(180)
+							top: rem(620)
+							left: rem(280)
 						.stand-ohl
 							right: rem(94)
 							p
 								width: rem(230)
 						.stand-hol
-							right: rem(65)
-						.stand-vzriv,
+							top: rem(170)
+							right: rem(15)
+						.stand-vzriv
+							top: rem(315)
+							right: rem(-20)
 						.stand-prokl
-							right: rem(55)
+							top: rem(445)
+							right: rem(15)
 						.stand-ten
 							right: rem(80)
 
@@ -932,6 +920,14 @@
 
 	/* Modal Start */
 	/* Modal End */
+
+/* Custom */
+@media only screen and (min-width : 1040px)
+	.header-navbar
+		#menu
+			li
+				.h-link
+					padding: rem(10) rem(20)
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)

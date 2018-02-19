@@ -6,15 +6,15 @@ $(function() {
 		if (messages.length == i) {
 			i = 0;
 		}
-		$('#message').html(messages[i]).fadeIn(500).delay(2000).fadeOut(500, function() {
+		$('#message').html(messages[i]).fadeIn(500).delay(3000).fadeOut(500, function() {
 			nextMsg(i + 1);
 		});
 	};
 
 	var messages = [
-	"20л: <span>6 650грн</span>&nbsp;<strong>5 750</strong> грн",
-	"30л: <span>7 150грн</span>&nbsp;<strong>6 250</strong> грн",
-	"50л: <span>7 650грн</span>&nbsp;<strong>6 750</strong> грн"
+	"10л: <span>4 090грн</span>&nbsp;<strong>3 390</strong> грн",
+	"20л: <span>4 690грн</span>&nbsp;<strong>4 090</strong> грн",
+	"30л: <span>5 190грн</span>&nbsp;<strong>4 690</strong> грн"
 	];
 
 	$('#message').hide();
@@ -245,64 +245,55 @@ $(function() {
 
 	var litreVal = $('.litre-val'),
 	bkVal = $('.bk-val'),
-	carVal = $('.car-val'),
-	suhVal = $('.suh-val'),
 	charImg = $('.char-img img'),
 	weight = $('#weight'),
 	inTank = $('#inTank'),
 	cleanSpirt = $('#cleanSpirt'),
 	inside = $('#inside'),
-	insideButle = $('#insideButle');
+	insideButle = $('#insideButle'),
+	formOldChar = $('#form-old-char'),
+	formValueChar = $('#form-value-char');
+
+	var tenTank = {
+		urlA: 'img/10/10.jpg',
+		urlT: 'img/10/tank-10.jpg',
+		weightA: '6 кг',
+		weightT: '4 кг',
+		inTank: '8 л',
+		cleanSpirt: '0.8 л',
+		inside: '2.0 л',
+		insideButle: '4 бутылок по 0.5',
+		oldPrice: '4 090₴',
+		newPrice: '3 390₴',
+		tankPrice: '2 100₴'
+	};
 
 	var twentyTank = {
 		urlA: 'img/20/20.jpg',
-		urlC: 'img/20/20c.jpg',
-		urlS: 'img/20/20s.jpg',
-		urlCs: 'img/20/20cs.jpg',
 		urlT: 'img/20/tank-20.jpg',
-		weightA: '8 кг',
-		weightC: '9 кг',
-		weightS: '10 кг',
-		weightCs: '11 кг',
+		weightA: '7 кг',
 		weightT: '5 кг',
 		inTank: '16 л',
 		cleanSpirt: '1.6 л',
 		inside: '4.0 л',
-		insideButle: '8 бутылок по 0.5'
+		insideButle: '8 бутылок по 0.5',
+		oldPrice: '4 690₴',
+		newPrice: '4 090₴',
+		tankPrice: '2 700₴'
 	};
 
 	var thirtyTank = {
 		urlA: 'img/30/30.jpg',
-		urlC: 'img/30/30c.jpg',
-		urlS: 'img/30/30s.jpg',
-		urlCs: 'img/30/30cs.jpg',
 		urlT: 'img/30/tank-30.jpg',
-		weightA: '10 кг',
-		weightC: '11 кг',
-		weightS: '12 кг',
-		weightCs: '13 кг',
+		weightA: '9 кг',
 		weightT: '7 кг',
 		inTank: '24 л',
 		cleanSpirt: '2.4 л',
 		inside: '6.0 л',
-		insideButle: '12 бутылок по 0.5'
-	};
-
-	var fiftyTank = {
-		urlA: 'img/50/50.jpg',
-		urlC: 'img/50/50c.jpg',
-		urlS: 'img/50/50s.jpg',
-		urlCs: 'img/50/50cs.jpg',
-		urlT: 'img/50/tank-50.jpg',
-		weightA: '12 кг',
-		weightC: '13 кг',
-		weightS: '14 кг',
-		weightCs: '15 кг',
-		weightT: '9 кг',
-		inTank: '38 л',
-		cleanSpirt: '3.8 л',
-		inside: '9.5 л',
-		insideButle: '19 бутылок по 0.5'
+		insideButle: '12 бутылок по 0.5',
+		oldPrice: '5 190₴',
+		newPrice: '4 690₴',
+		tankPrice: '3 200₴'
 	};
 
 	// Litre 'Click' handler
@@ -318,18 +309,14 @@ $(function() {
 		if ( bkVal.hasClass('active') ) {
 			charImg.attr('src', eval (dataTank + '.urlT') );
 			weight.text( eval (dataTank + '.weightT') );
-		} else if ( suhVal.hasClass('active')  && carVal.hasClass('active') ) {
-			charImg.attr('src', eval (dataTank + '.urlCs') );
-			weight.text( eval (dataTank + '.weightCs') );
-		} else if ( suhVal.hasClass('active') ) {
-			charImg.attr('src', eval (dataTank + '.urlS') );
-			weight.text( eval (dataTank + '.weightS') );
-		} else if ( carVal.hasClass('active') ) {
-			charImg.attr('src', eval (dataTank + '.urlC') );
-			weight.text( eval (dataTank + '.weightC') );
+			formOldChar.hide();
+			formValueChar.text( eval (dataTank + '.tankPrice') );
 		} else {
 			charImg.attr('src', eval (dataTank + '.urlA') );
 			weight.text( eval (dataTank + '.weightA') );
+			formOldChar.show();
+			formOldChar.text( eval (dataTank + '.oldPrice') );
+			formValueChar.text( eval (dataTank + '.newPrice') );
 		};
 		
 		inTank.text( eval (dataTank + '.inTank') );
@@ -349,87 +336,23 @@ $(function() {
 
 		charImg.attr('src', eval (dataTank + '.urlT') );
 		weight.text( eval (dataTank + '.weightT') );
-		$('.carSuh').addClass('hide');
+		// $('.carSuh').addClass('hide');
 		$(this).toggleClass('active');
 		if ( bkVal.hasClass('active') ) {
 			$(this).text('Аппарат в сборе');
+			formOldChar.hide();
+			formValueChar.text( eval (dataTank + '.tankPrice') );
 		} else {
 			$(this).text('Бак отдельно');
+			formOldChar.show();
+			formOldChar.text( eval (dataTank + '.oldPrice') );
+			formValueChar.text( eval (dataTank + '.newPrice') );
 			charImg.attr('src', eval (dataTank + '.urlA') );
 			weight.text( eval (dataTank + '.weightA') );
-			$('.carSuh').removeClass('hide');
+			// $('.carSuh').removeClass('hide');
 		};
 
 	});
-
-	// Carga 'Click' handler
-
-	$(carVal).on('click', function (event) {
-
-		event.preventDefault();
-
-		var dataTank = $('a.litre-val.active').attr('data-tank');
-
-		if ( suhVal.hasClass('active') ) {
-			charImg.attr('src', eval (dataTank + '.urlCs') );
-			weight.text( eval (dataTank + '.weightCs') );
-		} else {
-			charImg.attr('src', eval (dataTank + '.urlC') );
-			weight.text( eval (dataTank + '.weightC') );
-		};
-
-		$(this).toggleClass('active');
-
-		if ( carVal.hasClass('active') ) {
-			$(this).html('<span>-</span> царга');
-		} else {
-			$(this).html('<span>+</span> царга');
-
-			if ( suhVal.hasClass('active') ) {
-				charImg.attr('src', eval (dataTank + '.urlS') );
-				weight.text( eval (dataTank + '.weightS') );
-			} else {
-				charImg.attr('src', eval (dataTank + '.urlA') );
-				weight.text( eval (dataTank + '.weightA') );
-			};
-		};
-
-	});
-
-	// Suhoparnik 'Click' handler
-
-	$(suhVal).on('click', function (event) {
-
-		event.preventDefault();
-
-		var dataTank = $('a.litre-val.active').attr('data-tank');
-
-		if ( carVal.hasClass('active') ) {
-			charImg.attr('src', eval (dataTank + '.urlCs') );
-			weight.text( eval (dataTank + '.weightCs') );
-		} else {
-			charImg.attr('src', eval (dataTank + '.urlS') );
-			weight.text( eval (dataTank + '.weightS') );
-		};
-
-		$(this).toggleClass('active');
-
-		if ( suhVal.hasClass('active') ) {
-			$(this).html('<span>-</span> сухопарник');
-		} else {
-			$(this).html('<span>+</span> сухопарник');
-
-			if ( carVal.hasClass('active') ) {
-				charImg.attr('src', eval (dataTank + '.urlC') );
-				weight.text( eval (dataTank + '.weightC') );
-			} else {
-				charImg.attr('src', eval (dataTank + '.urlA') );
-				weight.text( eval (dataTank + '.weightA') );
-			};
-		};
-
-	});
-
 
 });
 
@@ -849,7 +772,7 @@ $(function() {
 });
 
 $(function() {
-	$('[type="tel"]').mask('+380999999999');
+	$('[type="tel"]').mask('+389999999999');
 });
 
 $(function() {
@@ -926,10 +849,10 @@ updater(document.getElementById("days2"),
 	document.getElementById("minutes2"),
 	document.getElementById("seconds2"));
 
-updater(document.getElementById("days3"),
-	document.getElementById("hours3"),
-	document.getElementById("minutes3"),
-	document.getElementById("seconds3"));
+// updater(document.getElementById("days3"),
+// 	document.getElementById("hours3"),
+// 	document.getElementById("minutes3"),
+// 	document.getElementById("seconds3"));
 
 });
 

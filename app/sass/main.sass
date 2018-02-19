@@ -194,7 +194,7 @@ textarea
 	justify-content: space-between
 	align-items: center
 	width: 100%
-	z-index: 100
+	// z-index: 100
 	.header-logo
 		img
 			height: rem(30) // sm rem(40) 
@@ -277,7 +277,7 @@ textarea
 			.btn
 				padding: rem(8) rem(10)
 				font-size: 14px
-				background-color: $green
+				background-color: $orange
 				margin-left: rem(10)
 			
 
@@ -338,7 +338,7 @@ textarea
 		.img-1
 			vertical-align: middle
 			width: 95%
-			margin-left: -70px
+			// margin-left: -70px
 		.h2
 			font-size: 18px // md 36px xs 22px
 			margin-top: rem(25)
@@ -361,7 +361,8 @@ textarea
 			font-size: 22px
 			span
 				text-decoration: line-through
-				color: $dark-gray
+				// color: $dark-gray
+				color: $tomato
 			strong
 				font-size: 35px
 				color: $accent
@@ -411,11 +412,11 @@ textarea
 			.header-btn
 				padding: rem(14) rem(8)
 				font-size: 18px
-				background-color: $green
+				background-color: $orange
 				cursor: pointer
 				color: #fff
 				&:hover
-					background-color: darken($green, 10%)
+					background-color: darken($orange, 10%)
 		.order
 			margin-top: rem(85)
 			position: relative
@@ -625,8 +626,8 @@ textarea
 						p
 							display: none
 					.stand-termV
-						top: rem(10)
-						right: rem(95)
+						top: rem(-10)
+						right: 0
 					.stand-carga,
 					.stand-deff,
 					.stand-termB,
@@ -635,38 +636,32 @@ textarea
 					.stand-kran
 						text-align: right
 					.stand-deff
-						top: rem(110)
+						top: rem(-15)
 						left: 0
 					.stand-carga
-						top: rem(175)
+						top: rem(95)
 						left: 0
 					.stand-termB
-						top: rem(245)
+						top: rem(165)
 						left: 0
 					.stand-zakr
-						top: rem(317)
+						top: rem(235)
 						left: 0
 					.stand-rebra
-						top: rem(390)
+						top: rem(293)
 						left: rem(10)
 					.stand-kran
-						top: rem(455)
-						left: rem(65)
-					.stand-ohl
-						top: rem(140)
-						right: 0
+						top: rem(320)
+						left: rem(75)
 					.stand-hol
-						top: rem(210)
+						top: rem(125)
 						right: 0
 					.stand-vzriv
-						top: rem(285)
+						top: rem(200)
 						right: 0
 					.stand-prokl
-						top: rem(343)
+						top: rem(265)
 						right: 0
-					.stand-ten
-						top: rem(440)
-						right: rem(20)
 
 
 /* Standart End */
@@ -689,11 +684,16 @@ textarea
 		max-width: 1140px
 		.h3
 			font-size: 32px
-			font-weight: bold
-			.title-no-mobile
-				display: none
-				span
-					font-family: $logo-font
+			margin-bottom: rem(50)
+			position: relative
+			&:after
+				content: ""
+				width: rem(150)
+				height: 3px
+				background-color: $accent
+				position: absolute
+				left: 0
+				margin-top: rem(55)
 		.char-img
 			text-align: center
 			img
@@ -724,22 +724,33 @@ textarea
 						text-decoration: none
 						color: $black
 					&.active
-						border: 2px solid $green
+						border: 2px solid $orange
 						border-radius: 5px
 						background-color: #fff
-			.bk-val, .car-val, .suh-val
-				font-size: 14px
-				span
-					font-family: $else-font
-			.car-val, .suh-val
-				&.active
-					color: $green
-					border-bottom: 1px solid $green
-			.carSuh
-				padding: 0
-				.separate-cs
-					margin: 0 rem(5)
-					display: none
+			.bk-box
+				.bk-val
+					font-size: 14px
+					span
+						font-family: $else-font
+			.l-char-form
+				width: 100%
+				.price
+					font-weight: bold
+					.char-form-label
+						font-size: 13px
+					.form-old-char
+						font-size: 22px
+						color: $dark-gray
+						text-decoration: line-through
+					.form-value-char
+						font-size: 30px
+				.charForm-btn
+					margin-top: rem(15)
+					padding: rem(12) rem(25)
+					// height: 80%
+					background-color: $orange
+					&:hover
+						background-color: darken($orange, 10%)
 		.char-list
 			.row
 				overflow: hidden
@@ -791,7 +802,7 @@ textarea
 					font-size: 13px
 					color: #878787
 					&.text-green
-						color: $green
+						color: $orange
 
 				.pr-val
 					font-size: 16px
@@ -829,10 +840,10 @@ textarea
 					padding: rem(16)
 					font-size: 18px
 					cursor: pointer
-					background-color: $green
+					background-color: $orange
 					max-height: rem(50)
 					&:hover
-						background-color: darken($green, 10%)
+						background-color: darken($orange, 10%)
 
 /* Characteristics End */
 
@@ -922,11 +933,11 @@ textarea
 					text-transform: uppercase
 					font-weight: bold
 					// margin: 0 rem(15)
-					background-color: $green
+					background-color: $orange
 					&:hover
 						text-decoration: none
 						color: #fff
-						background-color: darken($green, 10%)
+						background-color: darken($orange, 10%)
 
 
 	.add
@@ -1025,8 +1036,9 @@ textarea
 					color: #fff
 					margin-bottom: rem(20)
 				.price
-					color: #fff
+					color: #000
 					margin-bottom: rem(20)
+					background-color: #fff
 					.old
 						font-size: 16px // 576 16px
 						text-decoration: line-through
@@ -1047,15 +1059,23 @@ textarea
 						min-width: rem(32) // 576 rem(44) // 320 rem(32)
 					.delimiter
 						width: rem(15)
-		.bonus-btn
-			display: flex
-			justify-content: center
-			.btn
-				padding: rem(16) rem(42)
-				background-color: $green
-				margin-top: rem(-29)
-				&:hover
-					background-color: darken($green, 10%)
+		.bonus-form
+			margin-top: rem(-30)
+			form
+				display: flex
+				flex-direction: column
+				justify-content: center
+				input
+					margin-bottom: rem(5)
+					padding: rem(16) rem(42)
+					font-size: 18px
+				.btn
+					font-size: 18px
+					margin-bottom: rem(5)
+					padding: rem(16) rem(42)
+					background-color: $orange
+					&:hover
+						background-color: darken($orange, 10%)
 
 
 /* Bonus End */
@@ -1270,7 +1290,7 @@ textarea
 												text-decoration: none
 												color: $black
 											&.active
-												border: 2px solid $green
+												border: 2px solid $orange
 												border-radius: 5px
 												background-color: #fff
 							.choose
@@ -1302,9 +1322,9 @@ textarea
 							// margin: 0 auto
 							padding: rem(17) rem(25)
 							height: 80%
-							background-color: $green
+							background-color: $orange
 							&:hover
-								background-color: darken($green, 10%)
+								background-color: darken($orange, 10%)
 						// .add-buy
 						// 	.constr-btn
 						// 		padding: rem(10) rem(40)
@@ -1523,9 +1543,9 @@ textarea
 					.add-btn
 						font-size: 20px
 						padding: 7px 50px
-						background-color: $green
+						background-color: $orange
 						&:hover
-							background-color: darken($green, 10%)
+							background-color: darken($orange, 10%)
 
 
 /* Additionally End */
@@ -1827,9 +1847,9 @@ textarea
 					margin: rem(13) auto rem(13)
 					padding: 0 rem(25)
 					cursor: pointer
-					background-color: $green
+					background-color: $orange
 					&:hover
-						darken($green, 10%)
+						darken($orange, 10%)
 			.modal-footer
 				text-align: center
 				padding: rem(15)
