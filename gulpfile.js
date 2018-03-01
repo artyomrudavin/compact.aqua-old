@@ -25,10 +25,30 @@ gulp.task('common-js', function() {
 	.pipe(gulp.dest('app/js'));
 });
 
-gulp.task('js', ['common-js'], function() {
+gulp.task('charChoose-js', function() {
+	return gulp.src([
+		'app/js/modules/charChoose.js',
+		])
+	.pipe(concat('charChoose.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js/modules/min'));
+});
+
+gulp.task('constrCatalog-js', function() {
+	return gulp.src([
+		'app/js/modules/constrCatalog.js',
+		])
+	.pipe(concat('constrCatalog.min.js'))
+	.pipe(uglify())
+	.pipe(gulp.dest('app/js/modules/min'));
+});
+
+gulp.task('js', ['common-js', 'charChoose-js', 'constrCatalog-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/phoneMask.min.js',
+		'app/libs/phone-mask/phoneMask.min.js',
+		'app/js/modules/min/charChoose.min.js',
+		'app/js/modules/min/constrCatalog.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -60,7 +80,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
+	gulp.watch(['libs/**/*.js', 'app/js/common.js', 'app/js/modules/*.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
 });
 
@@ -83,9 +103,14 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		'app/sps/*.html',
 		]).pipe(gulp.dest('dist/sps'));
 
+	var buildFilesPc = gulp.src([
+		'app/politika-konfidencialnosti/*.html',
+		]).pipe(gulp.dest('dist/politika-konfidencialnosti'));
+
 	var buildCss = gulp.src([
 		'app/css/main.min.css',
 		'app/css/sps.min.css',
+		'app/css/pc.min.css',
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([

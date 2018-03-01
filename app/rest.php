@@ -98,7 +98,7 @@ $strmailPostData = '';
 			$strmailPostData .= ($strmailPostData == '' ? '' : '').$key.'= '.$value."\r\n";
 
 $recepient = "leads@aquagradus.com";
-$sitename = "standart.aquagradus.com";
+$sitename = "compact.aquagradus.com";
 
 $pagetitle = "Новая заявка \"$sitename\"";
 mail($recepient, $pagetitle, $strmailPostData, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");

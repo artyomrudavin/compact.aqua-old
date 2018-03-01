@@ -666,6 +666,45 @@ textarea
 
 /* Standart End */
 
+/* New-plus Start */
+
+.new-plus
+	padding-top: rem(30)
+	padding-bottom: rem(60)
+	background-color: $light-gray
+	.container-fluid
+		max-width: 1140px
+		.row
+			.text
+				.title
+					font-size: 32px
+					margin-bottom: rem(50)
+					position: relative
+					&:after
+						content: ""
+						width: rem(150)
+						height: 3px
+						background-color: $accent
+						position: absolute
+						left: 0
+						margin-top: rem(55)
+				h4
+					font-size: 20px
+					font-weight: normal
+					strong
+						font-size: 22px
+					.logo-font
+						font-size: 26px
+				.h4
+					font-weight: bold
+			.picture
+				img
+					margin: 0 auto
+				
+
+
+/* New-plus End */
+
 /* Characteristics Start */
 
 .bg-ch, .bg-pr
@@ -728,7 +767,7 @@ textarea
 						border-radius: 5px
 						background-color: #fff
 			.bk-box
-				.bk-val
+				.bk-val, .col-val
 					font-size: 14px
 					span
 						font-family: $else-font
@@ -1242,7 +1281,7 @@ textarea
 		.constr-row
 			flex-wrap: nowrap
 			.constructor-img
-				background: url(/img/constructor/20l-pro_big.jpg) no-repeat center top
+				background: url(/img/constructor/10l-pro_big.jpg) no-repeat center top
 				min-height: rem(280)
 				flex: 1 0 35%
 				background-size: contain
@@ -1740,6 +1779,11 @@ textarea
 						color: #fff
 				p, div, .title
 					margin-bottom: rem(8)
+				a
+					color: #fff
+				.politic
+					font-size: 14px
+					text-decoration: underline
 
 /* Footer End */
 
@@ -1860,9 +1904,15 @@ textarea
 
 /*test*/
 
-// .convenience
+.tips
+	display: none
+// .standart
+// 	display: none
+// .new-plus
 // 	display: none
 // .characteristics
+// 	display: none
+// .bonus
 // 	display: none
 // .recipe
 // 	display: none
@@ -1873,16 +1923,6 @@ textarea
 // .mode-two
 // 	display: none
 // .mode-three
-// 	display: none
-// .mode-four
-// 	display: none
-// .mode-five
-// 	display: none
-// .mode-six
-// 	display: none
-// .mode-seven
-// 	display: none
-// .mode-eight
 // 	display: none
 // .constructor
 // 	display: none
