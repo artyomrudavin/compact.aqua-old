@@ -189,7 +189,7 @@ $(function() {
 			hiddenComAdd.val('Угольная колонна AquaGradus');
 			// console.log('drogi');
 		} else if ( $(this).attr('id') == 'regMosh' ) {
-			addPrice.text('1 490₴');
+			addPrice.text('1 550₴');
 			addTextm.text('Регулятор мощности нагрева АГ-2');
 			hiddenComAdd.val('Регулятор мощности нагрева АГ-2');
 			// console.log('drogi');
