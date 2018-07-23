@@ -403,7 +403,7 @@ $(function() {
 
 $(function() {
 
-	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formCharMod").submit(function() { //Change
+	$("#headerCall, #headerForm, #modalBook, #formBuy, #aboutCall, #formAdd, #question, #char-form, #formBonus, #formCharMod, #formTank, #formVideo").submit(function() { //Change
 		var th = $(this);
 
 		$.ajax({

@@ -53,8 +53,8 @@
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Бак Aquagradus Стандарт на 20л');
-				hiddenComment.val('Бак Aquagradus Стандарт на 20л');
+				mtextValue.text('Бак Aquagradus Стандарт на 25л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
 				formValue.text('3 200₴');
 				imgConstr.css({
@@ -63,8 +63,8 @@
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Бак Aquagradus Стандарт на 30л');
-				hiddenComment.val('Бак Aquagradus Стандарт на 30л');
+				mtextValue.text('Бак Aquagradus Стандарт на 35л');
+				hiddenComment.val('Бак Aquagradus Стандарт на 35л');
 			} else if ( dataTk == 'fiftyTk' ) {
 				formValue.text('3 700₴');
 				imgConstr.css({
@@ -84,31 +84,31 @@
 
 			if ( dataTk == 'twentyTk' ) {
 				formOld.text('5 490₴');
-				formValue.text('4 890₴');
+				formValue.text('5 040₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l+-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат Компакт Плюс с баком на 20л');
-				hiddenComment.val('Самогонный аппарат Компакт Плюс с баком на 20л');
+				mtextValue.text('Самогонный аппарат Компакт Плюс с баком на 25л');
+				hiddenComment.val('Самогонный аппарат Компакт Плюс с баком на 25л');
 
 			} else if ( dataTk == 'thirtyTk' ) {
 				formOld.text('5 990₴');
-				formValue.text('5 490₴');
+				formValue.text('5 640₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l+-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат Компакт Плюс с баком на 30л');
-				hiddenComment.val('Самогонный аппарат Компакт Плюс с баком на 30л');
+				mtextValue.text('Самогонный аппарат Компакт Плюс с баком на 35л');
+				hiddenComment.val('Самогонный аппарат Компакт Плюс с баком на 35л');
 
 			} else if ( dataTk == 'fiftyTk' ) {
 				formOld.text('6 590₴');
-				formValue.text('6 090₴');
+				formValue.text('6 240₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/50l+-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -126,7 +126,7 @@
 
 			if ( dataTk == 'tenTk' ) {
 				formOld.text('4 090₴');
-				formValue.text('3 390₴');
+				formValue.text('3 490₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/10l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
@@ -137,26 +137,26 @@
 				hiddenComment.val('Самогонный аппарат с баком на 10л');
 			} else if ( dataTk == 'twentyTk' ) {
 				formOld.text('4 690₴');
-				formValue.text('4 090₴');
+				formValue.text('4 190₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/20l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат с баком на 20л');
-				hiddenComment.val('Самогонный аппарат с баком на 20л');
+				mtextValue.text('Самогонный аппарат с баком на 25л');
+				hiddenComment.val('Самогонный аппарат с баком на 25л');
 			} else if ( dataTk == 'thirtyTk' ) {
 				formOld.text('5 190₴');
-				formValue.text('4 690₴');
+				formValue.text('4 790₴');
 				imgConstr.css({
 					background: 'url(/img/constructor/30l-pro_big.jpg)',
 					backgroundRepeat: 'no-repeat',
 					backgroundSize: 'contain',
 					backgroundPosition: 'top center'
 				});
-				mtextValue.text('Самогонный аппарат с баком на 30л');
-				hiddenComment.val('Самогонный аппарат с баком на 30л');
+				mtextValue.text('Самогонный аппарат с баком на 35л');
+				hiddenComment.val('Самогонный аппарат с баком на 35л');
 			};
 		}
 	});
@@ -208,7 +208,7 @@
 			modalBtn.text('Купить колонну');
 		} else {
 			colVal.text('Колонна отдельно');
-			formValue.text('3 390₴');
+			formValue.text('3 490₴');
 			formOld.text('4 090₴');
 			formOld.show();
 			imgConstr.css({
@@ -273,7 +273,7 @@
 		} else {
 			bakVal.text('Бак отдельно');
 			$('#litr3').hide();
-			formValue.text('3 390₴');
+			formValue.text('3 490₴');
 			formOld.text('4 090₴');
 			formOld.show();
 			imgConstr.css({
@@ -347,16 +347,16 @@
 				$('#litr1').addClass('active');
 			};
 
-			formOld.text('5 890₴');
-			formValue.text('5 490₴');
+			formOld.text('5 990₴');
+			formValue.text('5 640₴');
 			imgConstr.css({
 				background: 'url(/img/constructor/20l+-pro_big.jpg)',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'contain',
 				backgroundPosition: 'top center'
 			});
-			mtextValue.text('Самогонный аппарат Компакт Плюс с баком 20л');
-			hiddenComment.val('Самогонный аппарат Компакт Плюс с баком 20л');
+			mtextValue.text('Самогонный аппарат Компакт Плюс с баком 25л');
+			hiddenComment.val('Самогонный аппарат Компакт Плюс с баком 25л');
 			if ( colValPC.hasClass('active') ) {
 				colValPC.text('Колонна Компакт');
 				bakVal.text('Бак отдельно');
@@ -370,7 +370,7 @@
 				modalBtn.text('Купить аппарат');
 			} else {
 				colValPC.text('Колонна Компакт Плюс');
-				formValue.text('3 390₴');
+				formValue.text('3 490₴');
 				formOld.text('4 090₴');
 				formOld.show();
 				imgConstr.css({

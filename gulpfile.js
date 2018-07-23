@@ -126,9 +126,9 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'акваградус.com',
-		user:      'com12',
-		password:  'bh9Q05dj5C',
+		host:      '51.15.19.20',
+		user:      'aquagradususer',
+		password:  'JqD9F2dF9J41SoN',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -138,7 +138,8 @@ gulp.task('deploy', function() {
 	'dist/.htaccess',
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/domains/aquagradus.com/public_html/compact'));
+	// .pipe(conn.dest('/www/compact.aquagradus.com/'));
+	.pipe(conn.dest('/www/www.compact.aquagradus.com/'));
 
 });
 

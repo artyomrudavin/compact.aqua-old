@@ -1,79 +1,5 @@
 @import "vars"
 
-/*==========  Desktop First  ==========*/
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	
-	/* Header Start */
-	/* Header End */
-	
-	/* Convenience Start */
-	/* Convenience End */
-
-	/* Characteristics Start */
-	/* Characteristics End */
-
-	/* Recipe Start */
-	/* Recipe End */
-
-	/* Modes Start */
-	/* Modes End */
-
-	/* Mode 8 Start */
-	/* Mode 8 End */
-
-	/* Constructor Start */
-	/* Constructor End */
-
-	/* About Start */
-	/* About End */
-
-	/* Additionally Start */
-	/* Additionally End */
-
-	/* Reviews Start */
-	/* Reviews End */
-
-	/* FAQ Start */
-	/* FAQ End */
-
-	/* Question Start */
-	/* Question End */
-
-	/* Footer Start */
-	/* Footer End */
-
-	/* Modal Start */
-	/* Modal End */
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	
-	/* Header Start */
-	/* Header End */
-
-	/* Recipe Start */
-	/* Recipe End */
-	
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
-	
-	/* Header Start */
-	/* Header End */
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
-
-
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
@@ -149,61 +75,80 @@
 
 	/* Standart End */
 
+	/* Tank Start */
+
+	.tank
+		.bg-transf
+			.container-fluid
+				padding-top: rem(35)
+				.tank-w
+					padding-bottom: rem(185)
+				.tank-img
+					padding-bottom: rem(70)
+				.tank-icos
+					.wre-t-box
+						margin-bottom: rem(20)
+	
+	/* Tank End */
+
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px)
 	/* Header Start */
 
-	.header-brand
-		.header-logo
-			img
-				height: rem(40) // xs rem(32)
-			p
-				font-size: 10px // xs 8px
-
-	.header-wellcome
-		padding-top: rem(67) // sm rem(67) xs rem(40)
-		.container-fluid
-			.h2
-				font-size: 26px // md 36px xs 22px
-			.h3
-				font-size: 64px // md 72px xs 48px
-			.h1
-				font-size: 26px // xs 16px
-			.standart
-				padding: 0 rem(14) // xs none
-				border: 2px solid #000 // xs none
-				top: rem(40) // md rem(45) rem(32)
-				left: rem(365) // md rem(420) rem(258)
-				font-size: 14px // md 20px xs 12px
-			.check
-				.check-item
-					span
-						font-size: 16px // xs 14px
-			.formAction
-				strong
-					font-size: 16px // xs 14px
-					left: rem(55) // sm rem(55) xs rem(40)
-					bottom: rem(27) // sm rem(27) xs rem(10)
-					.num
-						font-size: 22px // xs 18px
-		.header-bonus
-			top: rem(500)
-			right: rem(10)
-			width: rem(210)
-			padding: rem(10)
-			.bonus-title
-				font-size: 16px
-				margin-bottom: rem(10)
-			ul
-				li
-					p
-						font-size: 14px	
-			.akcii
-				margin-top: rem(10)
-				font-size: 14px
-			.timer
-				font-size: 16px
-
+	.header
+		.header-nav
+			.header-nav-box
+				.header-brand
+					.header-logo
+						img
+							height: rem(40) // xs rem(32)
+						p
+							font-size: 10px // xs 8px
+		.header-wellcome
+			padding-top: rem(67) // sm rem(67) xs rem(40)
+			.header-bonus
+				top: rem(500)
+				right: rem(10)
+				width: rem(210)
+				padding: rem(10)
+				.bonus-title
+					font-size: 16px
+					margin-bottom: rem(10)
+				ul
+					li
+						p
+							font-size: 14px	
+				.akcii
+					margin-top: rem(10)
+					font-size: 14px
+				.timer
+					font-size: 16px
+			.container-fluid
+				.row
+					.header-text
+						.h2
+							font-size: 26px // md 36px xs 22px
+						.h3
+							font-size: 64px // md 72px xs 48px
+						.h1
+							font-size: 26px // xs 16px
+						.standart
+							padding: 0 rem(14) // xs none
+							border: 2px solid #000 // xs none
+							top: rem(40) // md rem(45) rem(32)
+							left: rem(365) // md rem(420) rem(258)
+							font-size: 14px // md 20px xs 12px
+						.check
+							.check-item
+								span
+									font-size: 16px // xs 14px
+						.formAction
+							strong
+								font-size: 16px // xs 14px
+								left: rem(55) // sm rem(55) xs rem(40)
+								bottom: rem(27) // sm rem(27) xs rem(10)
+								.num
+									font-size: 22px // xs 18px
 
 	/* Header End */
 	
@@ -449,86 +394,122 @@
 		display: block!important
 
 	/* Header Start */
-
-	.header-nav-box
-		flex-direction: row
-	.header-brand
-		width: inherit
-		.phone-mobile, .icon
-			display: none
-	.header-navbar
-		z-index: 100
-		#menu
-			display: flex
-			flex-direction: row
-			li
-				.h-link
-					&::after
-						background-color: $accent
-						display: block
-						content: ""
-						height: 2px
-						width: 0%
-						transition: width .3s ease
-					&:hover::after, &:focus::after
-						width: 100%
-			.head-ph
-				display: block
-	.time-wrap
-		flex-direction: column
-		align-items: flex-start
-		width: 90%
-		height: 100%
-		p
-			margin-bottom: rem(-10)
-			margin-left: rem(12)
-		.timer
-			font-size: 24px
-			#days1, #hours1, #minutes1, #seconds1
-				min-width: rem(36)
-	.header-wellcome
-		.container-fluid
-			.img-2
-				// margin-left: rem(-95)
-			.img-1
-				display: none
-			.h2
-				font-size: 36px // 28px
-			.h3
-				font-size: 72px // 64px
-			.standart
-				top: rem(45) // rem(40)
-				left: rem(420) // rem(365)
-				font-size: 20px // 14px
-				z-index: 1
-			.formAction, form
-				min-width: rem(570)
-			.form
+	
+	.header
+		.header-nav
+			.header-nav-box
 				flex-direction: row
-				.form-item
-					width: 32%
-			.order
-				.order-bg
-					display: block
-				strong
-					min-width: rem(520)
-					left: rem(55) // sm rem(55) xs rem(40)
-					bottom: rem(27) // sm rem(27) xs rem(10)
-			.header-col-hd
-				display: block
-		.header-bonus
-			top: rem(90)
-			width: rem(220)
-			.bonus-title
-			ul
-				li
+				.header-brand
+					width: inherit
+					.phone-mobile, .icon
+						display: none
+				.header-navbar
+					z-index: 100
+					#menu
+						display: flex
+						flex-direction: row
+						li
+							.h-link
+								&::after
+									background-color: $accent
+									display: block
+									content: ""
+									height: 2px
+									width: 0%
+									transition: width .3s ease
+								&:hover::after, &:focus::after
+									width: 100%
+						.head-ph
+							display: block
+				.time-wrap
+					flex-direction: column
+					align-items: flex-start
+					width: 90%
+					height: 100%
 					p
-			.akcii
-			.timer
-				font-size: 18px
+						margin-bottom: rem(-10)
+						margin-left: rem(12)
+					.timer
+						font-size: 24px
+						#days1, #hours1, #minutes1, #seconds1
+							min-width: rem(36)
+		.header-wellcome
+			.container-fluid
+				.row
+					.header-text
+						.img-2
+							// margin-left: rem(-95)
+						.img-1
+							display: none
+						.garanty-ph
+							display: none
+						.h2
+							font-size: 36px // 28px
+						.h3
+							font-size: 72px // 64px
+						.standart
+							top: rem(45) // rem(40)
+							left: rem(420) // rem(365)
+							font-size: 20px // 14px
+							z-index: 1
+						.formAction, form
+							min-width: rem(570)
+						.form
+							flex-direction: row
+							.form-item
+								width: 32%
+						.order
+							.order-bg
+								display: block
+							strong
+								min-width: rem(520)
+								left: rem(55) // sm rem(55) xs rem(40)
+								bottom: rem(27) // sm rem(27) xs rem(10)
+					.header-col-hd
+						display: block
+						position: relative
+						.garanty
+							position: absolute
+							left: rem(20)
+							bottom: rem(230)
+							max-width: rem(80)
+				// .header-bonus
+				// 	top: rem(90)
+				// 	width: rem(220)
+				// 	.bonus-title
+				// 	ul
+				// 		li
+				// 			p
+				// 	.akcii
+				// 	.timer
+				// 		font-size: 18px
 
 
 	/* Header End */
+
+	/* Video Start */
+
+	.video
+		.container-fluid
+			.row
+				.col-md-4
+					ul
+						padding: rem(20)
+						margin-bottom: rem(20)
+						li
+						 &:not(:last-child)
+							margin-bottom: rem(20)
+							p
+								font-size: 18px
+				.col-md-12
+					.video-form
+						form
+							flex-direction: row
+							input
+								width: 32%
+								margin-right: rem(10)
+
+	/* Video End */
 	
 	/* Standart Start */
 
@@ -581,6 +562,27 @@
 							right: rem(55)
 
 	/* Standart End */
+
+	/* Tank Start */
+
+	.tank
+		.bg-transf
+			.container-fluid
+				padding-top: rem(65)
+				.tank-w
+					padding-bottom: rem(155)
+				.tank-img
+					padding-bottom: rem(60)
+				.tank-icos
+					.wre-t-box
+						margin-bottom: rem(30)
+				.tank-f
+					display: flex
+					justify-content: flex-end
+					.tank-form
+						margin-top: -170px
+	
+	/* Tank End */
 
 	/* Characteristics Start */
 
@@ -737,6 +739,13 @@
 
 	/* Reviews End */
 
+	.reviews
+		.container-fluid
+			.row
+				.mail
+					a
+						font-size: 24px
+
 	/* FAQ Start */
 	/* FAQ End */
 
@@ -785,17 +794,28 @@
 
 	/* Header Start */
 
-	.header-navbar
-		#menu
-			li
-				.h-link
-					padding: rem(10) rem(14)
-			.btnHead
-				.btn
-					padding: rem(10) rem(20)
-					font-size: 16px
-			.head-ph
-				font-size: 16px
+
+	.header
+		.header-nav
+			.header-nav-box
+				.header-navbar
+					#menu
+						li
+							.h-link
+								padding: rem(10) rem(14)
+						.btnHead
+							.btn
+								padding: rem(10) rem(20)
+								font-size: 16px
+						.head-ph
+							font-size: 16px
+		.header-wellcome
+			.container-fluid
+				.row
+					.header-col-hd
+						.garanty
+							left: rem(55)
+							bottom: rem(20)
 
 	/* Header End */
 	
@@ -852,6 +872,23 @@
 							right: rem(80)
 
 	/* Standart End */
+
+	/* Tank Start */
+
+	.tank
+		.bg-transf
+			.container-fluid
+				padding-top: rem(125)
+				.tank-w
+					padding-bottom: rem(64)
+				.tank-img
+					padding-bottom: 0
+				.tank-icos
+					.wre-t-box
+						// margin-bottom: rem(50)
+	
+
+	/* Tank End */
 
 	/* Characteristics Start */
 	/* Characteristics End */
@@ -924,21 +961,28 @@
 
 /* Custom */
 @media only screen and (min-width : 1040px)
-	.header-navbar
-		#menu
-			li
-				.h-link
-					padding: rem(10) rem(20)
+
+	.header
+		.header-nav
+			.header-nav-box
+				.header-navbar
+					#menu
+						li
+							.h-link
+								padding: rem(10) rem(20)
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
 	.lg-show
 		display: block!important
 
-	.header-wellcome
-		.container-fluid
-			.img-2
-				margin-left: initial
+	.header
+		.header-wellcome
+			.container-fluid
+				.row
+					.header-text
+						.img-2
+							margin-left: initial
 
 	/* Standart Start */
 	.standart
@@ -954,30 +998,40 @@
 
 /* Very Large Devices, Wide Screens */
 @media only screen and (min-width : 1280px)
-	.header-wellcome
-		.header-bonus
-			right: rem(30)
+	
+	.header
+		.header-wellcome
+			.header-bonus
+				right: rem(30)
 
 /* Very Large Devices, Wide Screens */
 @media only screen and (min-width : 1366px)
-	.header-wellcome
-		.header-bonus
-			right: rem(55)
+	
+	.header
+		.header-wellcome
+			.header-bonus
+				right: rem(55)
 
 /* Very Large Devices, Wide Screens */
 @media only screen and (min-width : 1440px)
-	.header-wellcome
-		.header-bonus
-			right: rem(105)
+
+	.header
+		.header-wellcome
+			.header-bonus
+				right: rem(105)
 
 /* Very Large Devices, Wide Screens */
 @media only screen and (min-width : 1600px)
-	.header-wellcome
-		.header-bonus
-			right: rem(185)
+
+	.header
+		.header-wellcome
+			.header-bonus
+				right: rem(185)
 
 /* Very Large Devices, Wide Screens */
 @media only screen and (min-width : 1920px)
-	.header-wellcome
-		.header-bonus
-			right: rem(345)
+
+	.header
+		.header-wellcome
+			.header-bonus
+				right: rem(345)

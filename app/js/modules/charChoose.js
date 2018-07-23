@@ -33,7 +33,7 @@
 		inside: '2.0 л',
 		insideButle: '4 бутылок по 0.5',
 		oldPrice: '4 090₴',
-		newPrice: '3 390₴',
+		newPrice: '3 490₴',
 		tankPrice: '2 100₴',
 		appName: 'AquaGradus Компакт 10 л',
 		tankName: 'Испарительная емкость 10 л'
@@ -46,18 +46,18 @@
 		weightA: '7 кг',
 		weightP: '8 кг',
 		weightT: '5 кг',
-		inTank: '16 л',
-		cleanSpirt: '1.6 л',
-		inside: '4.0 л',
-		insideButle: '8 бутылок по 0.5',
+		inTank: '20 л',
+		cleanSpirt: '2 л',
+		inside: '5.0 л',
+		insideButle: '10 бутылок по 0.5',
 		oldPrice: '4 690₴',
-		newPrice: '4 090₴',
+		newPrice: '4 190₴',
 		oldPricePlus: '5 490₴',
-		newPricePlus: '4 890₴',
+		newPricePlus: '5 040₴',
 		tankPrice: '2 700₴',
-		appName: 'AquaGradus Компакт 20 л',
-		appNameP: 'AquaGradus Компакт Плюс 20 л',
-		tankName: 'Испарительная емкость 20 л'
+		appName: 'AquaGradus Компакт 25 л',
+		appNameP: 'AquaGradus Компакт Плюс 25 л',
+		tankName: 'Испарительная емкость 25 л'
 	};
 
 	var thirtyTank = {
@@ -67,18 +67,18 @@
 		weightA: '9 кг',
 		weightP: '10 кг',
 		weightT: '7 кг',
-		inTank: '24 л',
-		cleanSpirt: '2.4 л',
-		inside: '6.0 л',
-		insideButle: '12 бутылок по 0.5',
+		inTank: '30 л',
+		cleanSpirt: '3 л',
+		inside: '7.5 л',
+		insideButle: '15 бутылок по 0.5',
 		oldPrice: '5 190₴',
-		newPrice: '4 690₴',
+		newPrice: '4 790₴',
 		oldPricePlus: '5 990₴',
-		newPricePlus: '5 490₴',
+		newPricePlus: '5 640₴',
 		tankPrice: '3 200₴',
-		appName: 'AquaGradus Компакт 30 л',
-		appNameP: 'AquaGradus Компакт Плюс 30 л',
-		tankName: 'Испарительная емкость 30 л'
+		appName: 'AquaGradus Компакт 35 л',
+		appNameP: 'AquaGradus Компакт Плюс 35 л',
+		tankName: 'Испарительная емкость 35 л'
 	};
 
 	var fiftyTank = {
@@ -95,7 +95,7 @@
 		oldPrice: '5 190₴',
 		newPrice: '4 690₴',
 		oldPricePlus: '6 590₴',
-		newPricePlus: '6 090₴',
+		newPricePlus: '6 240₴',
 		tankPrice: '3 700₴',
 		appName: 'AquaGradus Компакт 50 л',
 		appNameP: 'AquaGradus Компакт Плюс 50 л',
